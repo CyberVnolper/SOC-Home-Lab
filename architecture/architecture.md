@@ -149,47 +149,11 @@ This separates the laboratory communication from the normal Internet connection 
 
 ## 7. Logical Architecture
 
-```text
-                          INTERNET
-                              |
-                             NAT
-                              |
-                       10.0.2.0/24
-                              |
-                  +------------------------+
-
-                  |     WAZUH SERVER       |
-                  |     Ubuntu 24.04       |
-                  |                        |
-                  | Wazuh Server           |
-                  | Wazuh Indexer          |
-                  | Wazuh Dashboard        |
-                  |                        |
-                  | 192.168.56.101         |
-                  +-----------+------------+
-                              |
-                        HOST-ONLY LAB
-                       192.168.56.0/24
-                              |
-                    +---------+---------+
-
-                    |                   |
-          +---------v---------+ +-------v-------+
-
-          |   SOC-WINDOWS     | |   KALI LINUX  |
-          |   Windows 10      | |  Attack Lab   |
-          |                   | |               |
-          | Wazuh Agent       | | Controlled    |
-          | Sysmon            | | simulations   |
-          |                   | |               |
-          | 192.168.56.102    | | 192.168.56.X  |
-          +-------------------+ +---------------+
-```
 
 ![Diagrama Arquitectura Final](../screenshots/arquitectura-final.png)
 *\[CAPTURA — Diagrama de arquitectura final del laboratorio\]*
 
-Esta captura puede ser una imagen del propio diagrama anterior cuando posteriormente lo pasemos a una imagen más profesional.
+
 
 ---
 
