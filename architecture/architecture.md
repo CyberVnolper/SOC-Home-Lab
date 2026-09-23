@@ -37,7 +37,7 @@ Lab IP	192.168.56.101
 
 The Wazuh quickstart supports Ubuntu 24.04 and recommends 4 vCPU, 8 GiB RAM and 50 GB storage for a deployment monitoring 1–25 agents. In the all-in-one deployment, the Wazuh server, Wazuh indexer and Wazuh dashboard are installed on the same host, which Wazuh describes as suitable for labs and small environments.
 
-01-ubuntu-network.png
+![Red de Ubuntu](../screenshots/01-ubuntu-network.png)
 
 3.2 Wazuh Components
 
@@ -65,7 +65,7 @@ Status	Active
 
 The Wazuh agent is responsible for collecting security telemetry from the Windows endpoint and forwarding it to the Wazuh server for analysis.
 
-02-wazuh-agent-active.png
+![Agente Wazuh Activo](../screenshots/02-wazuh-agent-active.png)
 
 5. Sysmon
 
@@ -85,7 +85,7 @@ through the Windows Event Channel mechanism.
 
 Wazuh officially documents this method for collecting Sysmon logs from Windows agents.
 
-03-sysmon-event.png
+![Evento de Sysmon](../screenshots/03-sysmon-event.png)
 
 6. Network Architecture
 
