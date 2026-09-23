@@ -45,7 +45,7 @@ The central security platform is deployed on an Ubuntu Server virtual machine.
 
 The Wazuh quickstart supports Ubuntu 24.04 and recommends 4 vCPU, 8 GiB RAM and 50 GB storage for a deployment monitoring 1–25 agents. In the all-in-one deployment, the Wazuh server, Wazuh indexer and Wazuh dashboard are installed on the same host, which Wazuh describes as suitable for labs and small environments.
 
-![Configuración de red en Ubuntu](../screenshots/01-ubuntu-network.png)
+![Configuración de red en Ubuntu](../screenshots/architecture/01-ubuntu-network.png)
 *\[CAPTURA — ip addr del servidor Ubuntu mostrando enp0s3 y enp0s8 con sus IPs\]*
 
 ### 3.2 Wazuh Components
@@ -77,7 +77,7 @@ A Windows virtual machine is used as the monitored endpoint.
 
 The Wazuh agent is responsible for collecting security telemetry from the Windows endpoint and forwarding it to the Wazuh server for analysis.
 
-![Agente Wazuh Activo](../screenshots/02-wazuh-agent-active.png)
+![Agente Wazuh Activo](../screenshots/architecture/02-wazuh-agent-active.png)
 *\[CAPTURA — Wazuh Dashboard → Endpoints mostrando SOC-Windows, 192.168.56.102 y estado Active\]*
 
 ---
@@ -100,7 +100,7 @@ through the Windows Event Channel mechanism.
 
 Wazuh officially documents this method for collecting Sysmon logs from Windows agents.
 
-![Evento Sysmon](../screenshots/03-sysmon-event.png)
+![Evento Sysmon](../screenshots/architecture/03-sysmon-event.png)
 *\[CAPTURA — PowerShell mostrando un evento de Microsoft-Windows-Sysmon/Operational\]*
 
 ---
@@ -150,7 +150,7 @@ This separates the laboratory communication from the normal Internet connection 
 ## 7. Logical Architecture
 
 
-![Diagrama Arquitectura Final](soc-architecture.png)
+![Diagrama Arquitectura Final](../screenshots/architecture/soc-architecture.png)
 *\[CAPTURA — Diagrama de arquitectura final del laboratorio\]*
 
 
@@ -206,7 +206,7 @@ The initial laboratory has been successfully validated:
 | Sysmon event collection | ✅ Working |
 | Wazuh event visualization | ✅ Working |
 
-![Eventos Wazuh Dashboard](../screenshots/04-sysmon-events-in-wazuh.png)
+![Eventos Wazuh Dashboard](../screenshots/architecture/04-sysmon-events-in-wazuh.png)
 *\[CAPTURA — Wazuh Discover mostrando eventos procedentes de SOC-Windows\]*
 
 ---
