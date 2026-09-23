@@ -1,95 +1,68 @@
 # SOC Home Lab
 
-Laboratorio doméstico de ciberseguridad orientado a la monitorización, detección, investigación y respuesta ante incidentes de seguridad.
+Laboratorio práctico de ciberseguridad orientado a la monitorización, detección, investigación y respuesta ante incidentes de seguridad.
 
 ## Objetivo
 
-Construir un entorno controlado que permita practicar tareas propias de un Security Operations Center (SOC):
+Desarrollar y documentar investigaciones de seguridad en un entorno controlado, siguiendo un flujo de trabajo similar al de un equipo SOC.
 
-* Monitorización de endpoints
-* Recolección y análisis de logs
-* Detección de actividad sospechosa
-* Investigación de alertas
-* Identificación de indicadores de compromiso (IOC)
-* Correlación de eventos
-* Mapeo con MITRE ATT&CK
-* Respuesta y mitigación
-* Documentación de incidentes
+El proyecto busca demostrar de forma práctica:
 
-## Arquitectura
-
-El laboratorio estará compuesto inicialmente por:
-
-Kali Linux
-    |
-    | Ataques controlados
-    v
-Windows Endpoint + Sysmon
-    |
-    | Logs
-    v
-Wazuh
-    |
-    v
-SOC Dashboard
-
-## Tecnologías
-
-* Wazuh
-* Windows
-* Sysmon
-* Kali Linux
-* Linux
-* Wireshark
-* Nmap
-* PowerShell
-* MITRE ATT&CK
-
-## Casos de uso
-
-### 01 - Brute Force
-
-Detección e investigación de múltiples intentos de autenticación fallidos.
-
-### 02 - Suspicious PowerShell
-
-Detección e investigación de ejecución sospechosa de PowerShell.
-
-### 03 - Network Scan
-
-Detección de actividad de reconocimiento y escaneo de puertos.
-
-### 04 - Suspicious User Creation
-
-Detección de creación de cuentas de usuario potencialmente sospechosas.
-
-### 05 - Suspicious Login
-
-Investigación de patrones de autenticación anómalos.
-
-### 06 - Suspicious Process Execution
-
-Investigación de procesos y actividad potencialmente maliciosa.
+- Análisis de eventos de seguridad.
+- Detección de actividad sospechosa.
+- Investigación de incidentes.
+- Identificación de indicadores de compromiso (IOC).
+- Análisis de evidencias.
+- Mapeo con MITRE ATT&CK.
+- Respuesta y mitigación.
+- Documentación técnica.
 
 ## Incidentes
 
-Cada incidente incluirá:
+### INC-001 — Brute Force
 
-1. Descripción
-2. Evidencias
-3. Timeline
-4. Indicadores de compromiso
-5. Investigación
-6. MITRE ATT&CK
-7. Impacto
-8. Respuesta
-9. Mitigación
-10. Conclusiones
+Investigación de múltiples intentos de autenticación fallidos.
+
+[Ver incidente](incidents/INC-001-brute-force/README.md)
+
+### INC-002 — Suspicious PowerShell
+
+Investigación de actividad sospechosa relacionada con PowerShell.
+
+[Ver incidente](incidents/INC-002-suspicious-powershell/README.md)
+
+### INC-003 — Network Scan
+
+Investigación de actividad de reconocimiento y escaneo de red.
+
+[Ver incidente](incidents/INC-003-network-scan/README.md)
+
+### INC-004 — Suspicious Process Execution
+
+Investigación de una ejecución y cadena de procesos potencialmente sospechosa.
+
+[Ver incidente](incidents/INC-004-suspicious-process/README.md)
+
+## Documentación
+
+La documentación del proyecto se organiza en:
+
+- `architecture/` — documentación de la infraestructura.
+- `detections/` — documentación de las detecciones.
+- `incidents/` — investigaciones completas de los incidentes.
+- `reports/` — informes finales.
+- `screenshots/` — evidencias visuales.
+- `scripts/` — scripts utilizados durante el laboratorio.
 
 ## Estado
 
-🟡 Laboratorio en construcción
+En desarrollo.
 
+## Disclaimer
+
+Todo el contenido de este repositorio se realiza exclusivamente en entornos de laboratorio controlados y con fines educativos.
+
+Las pruebas de seguridad se realizan únicamente sobre sistemas pertenecientes al laboratorio y bajo condiciones controladas.
 ## Disclaimer
 
 Todo el contenido de este repositorio se realiza exclusivamente en entornos de laboratorio controlados y con fines educativos.
