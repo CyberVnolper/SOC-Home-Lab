@@ -186,7 +186,7 @@ This separates the laboratory communication from the normal Internet connection 
           +-------------------+ +---------------+
 ```
 
-![Diagrama Arquitectura Final](../screenshots/04-sysmon-events-in-wazuh.png)
+![Diagrama Arquitectura Final](../screenshots/arquitectura-final.png)
 *\[CAPTURA — Diagrama de arquitectura final del laboratorio\]*
 
 Esta captura puede ser una imagen del propio diagrama anterior cuando posteriormente lo pasemos a una imagen más profesional.
