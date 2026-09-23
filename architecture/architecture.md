@@ -150,7 +150,7 @@ This separates the laboratory communication from the normal Internet connection 
 ## 7. Logical Architecture
 
 
-![Diagrama Arquitectura Final](../screenshots/arquitectura-final.png)
+![Diagrama Arquitectura Final](soc-architecture.png)
 *\[CAPTURA — Diagrama de arquitectura final del laboratorio\]*
 
 
