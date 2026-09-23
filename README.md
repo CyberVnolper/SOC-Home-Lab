@@ -17,6 +17,20 @@ El proyecto busca demostrar de forma práctica:
 - Respuesta y mitigación.
 - Documentación técnica.
 
+## Herramientas
+
+- Wazuh
+- Sysmon
+- Windows
+- Ubuntu Server
+- Kali Linux
+- Nmap
+- Wireshark
+- PowerShell
+- Bash
+- Python
+- MITRE ATT&CK
+
 ## Incidentes
 
 ### INC-001 — Brute Force
@@ -63,6 +77,3 @@ En desarrollo.
 Todo el contenido de este repositorio se realiza exclusivamente en entornos de laboratorio controlados y con fines educativos.
 
 Las pruebas de seguridad se realizan únicamente sobre sistemas pertenecientes al laboratorio y bajo condiciones controladas.
-## Disclaimer
-
-Todo el contenido de este repositorio se realiza exclusivamente en entornos de laboratorio controlados y con fines educativos.
