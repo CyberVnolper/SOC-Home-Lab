@@ -1,0 +1,119 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.24",
+  "_id": "r-zy06AByWZvIndHWy8n",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.102",
+      "name": "SOC-Windows",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "subjectLogonId": "0x0",
+          "ipAddress": "192.168.56.104",
+          "authenticationPackageName": "NTLM",
+          "workstationName": "SOCKALI",
+          "subStatus": "0xc000006a",
+          "logonProcessName": "NtLmSsp",
+          "targetUserName": "victorr",
+          "keyLength": "0",
+          "subjectUserSid": "S-1-0-0",
+          "processId": "0x0",
+          "ipPort": "39662",
+          "failureReason": "%%2313",
+          "targetDomainName": "WORKGROUP",
+          "targetUserSid": "S-1-0-0",
+          "logonType": "3",
+          "status": "0xc000006d"
+        },
+        "system": {
+          "eventID": "4625",
+          "keywords": "0x8010000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "message": "\"Error de una cuenta al iniciar sesión.\r\n\r\nSujeto:\r\n\tId. de seguridad:\t\tS-1-0-0\r\n\tNombre de cuenta:\t\t-\r\n\tDominio de cuenta:\t\t-\r\n\tId. de inicio de sesión:\t\t0x0\r\n\r\nTipo de inicio de sesión:\t\t\t3\r\n\r\nCuenta con error de inicio de sesión: \r\n\tId. de seguridad:\t\tS-1-0-0\r\n\tNombre de cuenta:\t\tvictorr\r\n\tDominio de cuenta:\t\tWORKGROUP\r\n\r\nInformación de error:\r\n\tMotivo del error:\t\tNombre de usuario desconocido o contraseña incorrecta\r\n\tEstado:\t\t\t0xC000006D\r\n\tSubestado:\t\t0xC000006A\r\n\r\nInformación de proceso:\r\n\tId. de proceso del autor de la llamada:\t0x0\r\n\tNombre de proceso del autor de la llamada:\t-\r\n\r\nInformación de red:\r\n\tNombre de estación de trabajo:\tSOCKALI\r\n\tDirección de red de origen:\t192.168.56.104\r\n\tPuerto de origen:\t\t39662\r\n\r\nInformación de autenticación detallada:\r\n\tProceso de inicio de sesión:\t\tNtLmSsp \r\n\tPaquete de autenticación:\tNTLM\r\n\tServicios transitados:\t-\r\n\tNombre de paquete (solo NTLM):\t-\r\n\tLongitud de clave:\t0\r\n\r\nEste evento se genera cuando se produce un error en una solicitud de inicio de sesión. Lo genera el equipo al que se intentó tener acceso.\r\n\r\nLos campos de sujeto indican la cuenta del sistema local que solicitó el inicio de sesión. Suele ser un servicio como el servicio de servidor o un proceso local como Winlogon.exe o Services.exe.\r\n\r\nEl campo Tipo de inicio de sesión indica la clase de inicio de sesión que se solicitó. Los tipos más comunes son 2 (interactivo) y 3 (red).\r\n\r\nLos campos Información de proceso indican la cuenta y el proceso en el sistema que solicitó el inicio de sesión.\r\n\r\nLos campos Información de red indican dónde se originó una solicitud de inicio de sesión remota. Nombre de estación de trabajo no está siempre disponible y se puede dejar en blanco en algunos casos.\r\n\r\nLos campos de información de autenticación proporcionan información detallada sobre esta solicitud de inicio de sesión específica.\r\n\t- Servicios transitados indica los servicios intermedios que participaron en esta solicitud de inicio de sesión.\r\n\t- Nombre de paquete indica el subprotocolo que se usó entre los protocolos NTLM.\r\n\t- Longitud de clave indica la longitud de la clave de sesión generada. Será 0 si no se solicitó una clave de sesión.\"",
+          "version": "0",
+          "systemTime": "2026-09-24T15:03:35.4139336Z",
+          "eventRecordID": "5271",
+          "threadID": "7000",
+          "computer": "DESKTOP-O678CDM",
+          "task": "12544",
+          "processID": "676",
+          "severityValue": "AUDIT_FAILURE",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.2.4",
+        "10.2.5"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC6.1",
+        "CC6.8",
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Logon Failure - Unknown user or bad password",
+      "groups": [
+        "windows",
+        "windows_security",
+        "authentication_failed"
+      ],
+      "nist_800_53": [
+        "AU.14",
+        "AC.7"
+      ],
+      "gdpr": [
+        "IV_35.7.d",
+        "IV_32.2"
+      ],
+      "firedtimes": 44,
+      "mitre": {
+        "technique": [
+          "Account Access Removal"
+        ],
+        "id": [
+          "T1531"
+        ],
+        "tactic": [
+          "Impact"
+        ]
+      },
+      "id": "60122",
+      "gpg13": [
+        "7.1"
+      ]
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1790262263.1543759",
+    "timestamp": "2026-09-24T15:04:23.875+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-09-24T15:04:23.875Z"
+    ]
+  },
+  "sort": [
+    1790262263875
+  ]
+}
