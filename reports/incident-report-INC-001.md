@@ -113,9 +113,18 @@ The investigation evidence is maintained separately from this report:
 *   [`evidence/logs/wazuh-60204.txt`](evidence/logs/wazuh-60204.txt)
 
 ### Screenshots
-*   [`evidence/screenshots/01-windows-4625.png`](evidence/screenshots/01-windows-4625.png)
-*   [`evidence/screenshots/02-wazuh-4625-alert.png`](evidence/screenshots/02-wazuh-4625-alert.png)
-*   [`evidence/screenshots/03-wazuh-4625-timeline.png`](../evidence/screenshots/03-wazuh-4625-timeline.png)
+
+#### 01 - Remote Brute Force (Event ID 4625)
+![Remote Brute Force](../screenshots/01-remote-brute-force-4625.png)
+
+#### 02 - Wazuh Alert
+![Wazuh Alert](../screenshots/02-wazuh-4625-alert.png)
+
+#### 02 - Wazuh Event Data
+![Wazuh Event](../screenshots/02-wazuh-4625-event.png)
+
+#### 03 - Wazuh Timeline
+![Wazuh Timeline](../screenshots/03-wazuh-4625-timeline.png)
 
 ## Conclusion
 
