@@ -88,8 +88,7 @@ evidence/
 
 ## Final Report
 
-The complete incident report is available at:
+The complete incident report is available at: [incident-report-INC-001.md](../../reports/incident-report-INC-001.md)
 
-`../../reports/incident-report-INC-001.md`
 
 
