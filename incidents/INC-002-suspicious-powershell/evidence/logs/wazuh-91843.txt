@@ -1,0 +1,60 @@
+INC-002 — Wazuh Detection Log
+
+Wazuh Rule ID: 91843
+Rule Level: 3
+Rule Description: Powershell executed "New-ItemProperty -Path". Possible addition of new item to registry
+
+Detection Time (UTC):
+2026-09-25T12:15:13.742Z
+
+Agent:
+ID: 001
+Name: SOC-Windows
+IP: 192.168.56.102
+
+Manager:
+Name: wazuh-server
+
+Windows Event:
+Event ID: 4104
+Event Record ID: 1017
+Channel: Microsoft-Windows-PowerShell/Operational
+Provider: Microsoft-Windows-PowerShell
+Severity: VERBOSE
+
+Windows Host:
+DESKTOP-O678CDM
+
+PowerShell Script Block:
+Script Block ID: f72b33ce-2f30-43d6-ac4c-30d4bbf8ed82
+Message Number: 1
+Message Total: 1
+
+Executed Command:
+New-ItemProperty -Path "HKLM:\Software\Microsoft\ADs" -Name "NoofAlerts" -Value 2 -PropertyType DWord
+
+Registry Modification:
+Path: HKLM:\Software\Microsoft\ADs
+Value Name: NoofAlerts
+Value Type: DWord
+Value: 2
+
+Process:
+Process ID: 9732
+
+MITRE ATT&CK:
+T1059.001 — PowerShell
+T1112 — Modify Registry
+
+Wazuh Alert ID:
+1790338513.1376404
+
+Wazuh Alert Fired Times:
+3
+
+Activity Classification:
+Controlled laboratory PowerShell simulation
+
+Investigation Result:
+No additional suspicious activity associated with the simulation was observed.
+
