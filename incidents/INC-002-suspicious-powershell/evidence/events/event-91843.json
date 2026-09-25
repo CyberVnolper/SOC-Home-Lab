@@ -1,0 +1,85 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.25",
+  "_id": "v2d92KABYkQNkHDV5tui",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.102",
+      "name": "SOC-Windows",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "messageNumber": "1",
+          "messageTotal": "1",
+          "scriptBlockText": " New-ItemProperty -Path \\\"HKLM:\\\\Software\\\\Microsoft\\\\ADs\\\" -Name \\\"NoofAlerts\\\" -Value 2 -PropertyType DWord",
+          "scriptBlockId": "f72b33ce-2f30-43d6-ac4c-30d4bbf8ed82"
+        },
+        "system": {
+          "eventID": "4104",
+          "keywords": "0x0",
+          "providerGuid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}",
+          "level": "5",
+          "channel": "Microsoft-Windows-PowerShell/Operational",
+          "opcode": "15",
+          "message": "\"Creando texto de bloque de script (1 de 1):\r\n\nNew-ItemProperty -Path \"HKLM:\\Software\\Microsoft\\ADs\" -Name \"NoofAlerts\" -Value 2 -PropertyType DWord\r\n\r\nId. de bloque de script: f72b33ce-2f30-43d6-ac4c-30d4bbf8ed82\r\nRuta de acceso: \"",
+          "version": "1",
+          "systemTime": "2026-09-25T12:14:55.2037836Z",
+          "eventRecordID": "1017",
+          "threadID": "5656",
+          "computer": "DESKTOP-O678CDM",
+          "task": "2",
+          "processID": "9732",
+          "severityValue": "VERBOSE",
+          "providerName": "Microsoft-Windows-PowerShell"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 3,
+      "mail": false,
+      "level": 3,
+      "description": "Powershell executed \"New-ItemProperty -Path\". Possible addition of new item to registry",
+      "groups": [
+        "windows",
+        " powershell"
+      ],
+      "mitre": {
+        "technique": [
+          "PowerShell",
+          "Modify Registry"
+        ],
+        "id": [
+          "T1059.001",
+          "T1112"
+        ],
+        "tactic": [
+          "Execution",
+          "Defense Evasion"
+        ]
+      },
+      "id": "91843"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1790338513.1376404",
+    "timestamp": "2026-09-25T12:15:13.742+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-09-25T12:15:13.742Z"
+    ]
+  },
+  "sort": [
+    1790338513742
+  ]
+}
