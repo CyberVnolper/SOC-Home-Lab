@@ -105,26 +105,32 @@ These measures are listed as general defensive considerations and were not requi
 The investigation evidence is maintained separately from this report:
 
 ### Event Data
-*   [`evidence/events/event-60122.json`](evidence/events/event-60122.json)
-*   [`evidence/events/event-60204.json`](evidence/events/event-60204.json)
+
+* [`event-60122.json`](../incidents/INC-001-brute-force/evidence/events/event-60122.json)
+* [`event-60204.json`](../incidents/INC-001-brute-force/evidence/events/event-60204.json)
 
 ### Log Data
-*   [`evidence/logs/wazuh-60122.txt`](evidence/logs/wazuh-60122.txt)
-*   [`evidence/logs/wazuh-60204.txt`](evidence/logs/wazuh-60204.txt)
+
+* [`wazuh-60122.txt`](../incidents/INC-001-brute-force/evidence/logs/wazuh-60122.txt)
+* [`wazuh-60204.txt`](../incidents/INC-001-brute-force/evidence/logs/wazuh-60204.txt)
 
 ### Screenshots
 
 #### 01 - Remote Brute Force (Event ID 4625)
-![Remote Brute Force](../screenshots/01-remote-brute-force-4625.png)
+
+![Remote Brute Force](../incidents/INC-001-brute-force/evidence/screenshots/01-remote-brute-force-4625.png)
 
 #### 02 - Wazuh Alert
-![Wazuh Alert](../screenshots/02-wazuh-4625-alert.png)
 
-#### 02 - Wazuh Event Data
-![Wazuh Event](../screenshots/02-wazuh-4625-event.png)
+![Wazuh Alert](../incidents/INC-001-brute-force/evidence/screenshots/02-wazuh-4625-alert.png)
 
-#### 03 - Wazuh Timeline
-![Wazuh Timeline](../screenshots/03-wazuh-4625-timeline.png)
+#### 03 - Wazuh Event Data
+
+![Wazuh Event](../incidents/INC-001-brute-force/evidence/screenshots/02-wazuh-4625-event.png)
+
+#### 04 - Wazuh Timeline
+
+![Wazuh Timeline](../incidents/INC-001-brute-force/evidence/screenshots/03-wazuh-4625-timeline.png)
 
 ## Conclusion
 
