@@ -90,6 +90,6 @@ evidence/
 
 The complete incident report is available at:
 
-`../../reports/incident-report-INC-001.md`
+`../../../reports/incident-report-INC-001.md`
 
 
