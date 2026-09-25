@@ -81,8 +81,9 @@ evidence/
 │   ├── wazuh-60122.txt
 │   └── wazuh-60204.txt
 └── screenshots/
-    ├── 01-windows-4625.png
+    ├── 01-remote-brute-force-4625.png
     ├── 02-wazuh-4625-alert.png
+    ├── 02-wazuh-4625-event.png
     └── 03-wazuh-4625-timeline.png
 ```
 
