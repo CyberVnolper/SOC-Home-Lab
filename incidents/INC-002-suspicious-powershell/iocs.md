@@ -1,4 +1,4 @@
-    # INC-002 — Indicators and Observables
+        # INC-002 — Indicators and Observables
 
     ## Network Indicators
 
@@ -39,4 +39,3 @@
     | **Process ID**      | `9732`                                     |
 
     No persistent external indicator such as a public IP address, domain, URL or hash was identified in the collected evidence.
-
