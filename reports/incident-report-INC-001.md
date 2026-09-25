@@ -64,8 +64,8 @@ The underlying Windows authentication failures occurred immediately beforehand.
 
 Individual event timestamps and Windows event record identifiers are preserved in the evidence files:
 
-*   [`evidence/events/event-60122.json`](evidence/events/event-60122.json)
-*   [`evidence/events/event-60204.json`](evidence/events/event-60204.json)
+* [`event-60122.json`](../incidents/INC-001-brute-force/evidence/events/event-60122.json)
+* [`event-60204.json`](../incidents/INC-001-brute-force/evidence/events/event-60204.json)
 
 ## Impact Assessment
 
