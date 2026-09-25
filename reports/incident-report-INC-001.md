@@ -115,7 +115,7 @@ The investigation evidence is maintained separately from this report:
 ### Screenshots
 *   [`evidence/screenshots/01-windows-4625.png`](evidence/screenshots/01-windows-4625.png)
 *   [`evidence/screenshots/02-wazuh-4625-alert.png`](evidence/screenshots/02-wazuh-4625-alert.png)
-*   [`evidence/screenshots/03-wazuh-4625-timeline.png`](evidence/screenshots/03-wazuh-4625-timeline.png)
+*   [`evidence/screenshots/03-wazuh-4625-timeline.png`](../evidence/screenshots/03-wazuh-4625-timeline.png)
 
 ## Conclusion
 
