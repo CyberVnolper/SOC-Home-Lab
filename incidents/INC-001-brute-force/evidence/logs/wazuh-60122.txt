@@ -1,0 +1,57 @@
+```text
+INC-001 — Wazuh Event Log
+
+Wazuh Rule ID: 60122
+Rule Description: Logon Failure - Unknown user or bad password
+Rule Level: 5
+
+Windows Event ID: 4625
+Windows Channel: Security
+Event Severity: AUDIT_FAILURE
+Provider: Microsoft-Windows-Security-Auditing
+Decoder: windows_eventchannel
+
+Wazuh Alert Timestamp: 2026-09-24T15:04:23.875+0000
+Windows Event System Time: 2026-09-24T15:03:35.4139336Z
+
+Agent:
+  ID: 001
+  Name: SOC-Windows
+  IP: 192.168.56.102
+
+Manager:
+  Name: wazuh-server
+
+Target Account:
+  Username: victorr
+  Domain: WORKGROUP
+  SID: S-1-0-0
+
+Source:
+  IP Address: 192.168.56.104
+  Port: 39662
+  Workstation: SOCKALI
+
+Authentication:
+  Logon Type: 3
+  Authentication Package: NTLM
+  Logon Process: NtLmSsp
+
+Failure:
+  Reason: %%2313
+  Status: 0xc000006d
+  SubStatus: 0xc000006a
+
+Windows Computer:
+  DESKTOP-O678CDM
+
+Event Record ID: 5271
+Wazuh Alert ID: 1790262263.1543759
+Alert Fired Times: 44
+
+Rule Groups:
+  windows
+  windows_security
+  authentication_failed
+```
+
