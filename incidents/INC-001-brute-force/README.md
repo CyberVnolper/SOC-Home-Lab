@@ -2,49 +2,59 @@
 
 ## Incident Summary
 
-A controlled series of failed authentication attempts was generated against the Windows endpoint `SOC-Windows`.
+A controlled brute-force authentication simulation was performed inside the isolated SOC Home Lab against the Windows endpoint `SOC-Windows`.
 
-The activity was performed inside the isolated SOC Home Lab using Kali Linux as the source system and Windows as the monitored endpoint.
+The activity generated repeated Windows Security Event ID `4625` failures. Wazuh detected individual failures with rule `60122` and correlated the repeated activity with rule `60204 — Multiple Windows Logon Failures`.
 
-The authentication failures generated Windows Security Event ID `4625` events and were subsequently collected and analyzed by Wazuh.
-
-Wazuh identified the individual failed logons and correlated the repeated activity using rule `60204 — Multiple Windows Logon Failures`.
+The incident was investigated as a laboratory exercise and documented using the collected Wazuh event data, logs and screenshots.
 
 ## Affected Asset
 
-| Field | Value |
-| :--- | :--- |
-| **Host** | `SOC-Windows` |
-| **IP** | `192.168.56.102` |
-| **Operating System** | Windows 10 Pro |
-| **Log Source** | Windows Security Event Log |
-| **Event ID** | `4625` |
-| **Target Account** | `victorr` |
+| Field                | Value                      |
+|:---------------------|:---------------------------|
+| **Host**             | `SOC-Windows`              |
+| **IP**               | `192.168.56.102`           |
+| **Operating System** | Windows 10 Pro             |
+| **Log Source**       | Windows Security Event Log |
+| **Windows Event ID** | `4625`                     |
+| **Target Account**   | `victorr`                  |
 
 ## Detection
 
-The investigation identified five matching authentication-failure events.
+The detection chain was:
 
-Four events were associated with rule `60122` and one correlated event was associated with rule `60204`.
+```text
+Failed Authentication
+        ↓
+Windows Event ID 4625
+        ↓
+Wazuh Agent
+        ↓
+Rule 60122
+        ↓
+Rule 60204
+        ↓
+SOC Investigation
+```
 
-### Correlated Alert
+The correlated Wazuh alert was:
 
-| Field | Value |
-| :--- | :--- |
-| **Rule ID** | `60204` |
-| **Description** | Multiple Windows Logon Failures |
-| **Level** | `10` |
-
-### Supporting Events
-
-| Rule ID | Description | Level | Event ID | Events |
-| :--- | :--- | :---: | :---: | :---: |
-| `60122` | Logon Failure - Unknown user... | 5 | `4625` | 4 |
-| `60204` | Multiple Windows Logon Failures | 10 | `4625` | 1 |
+| Field            | Value                           |
+|:-----------------|:--------------------------------|
+| **Rule ID**      | `60204`                         |
+| **Description**  | Multiple Windows Logon Failures |
+| **Level**        | `10`                            |
+| **Frequency**    | `8`                             |
+| **MITRE ATT&CK** | `T1110 — Brute Force`           |
 
 ## Source
 
-The authentication attempts originated from the Kali Linux host inside the isolated laboratory network.
+The activity originated from the Kali Linux host used in the isolated laboratory network.
+
+Observed source:
+
+* IP: `192.168.56.104`
+* Workstation: `SOCKALI`
 
 ## Status
 
@@ -52,7 +62,7 @@ The authentication attempts originated from the Kali Linux host inside the isola
 
 ## Investigation
 
-The incident investigation is documented in:
+The detailed investigation and technical analysis are documented in:
 
 * `timeline.md`
 * `iocs.md`
@@ -60,13 +70,26 @@ The incident investigation is documented in:
 
 ## Evidence
 
-Evidence collected during the investigation is stored under:
+All collected evidence is stored under:
 
-`evidence/`
+```text
+evidence/
+├── events/
+│   ├── event-60122.json
+│   └── event-60204.json
+├── logs/
+│   ├── wazuh-60122.txt
+│   └── wazuh-60204.txt
+└── screenshots/
+    ├── 01-windows-4625.png
+    ├── 02-wazuh-4625-alert.png
+    └── 03-wazuh-4625-timeline.png
+```
 
 ## Final Report
 
-The final incident report is available at:
+The complete incident report is available at:
 
 `../../reports/incident-report-INC-001.md`
+
 
