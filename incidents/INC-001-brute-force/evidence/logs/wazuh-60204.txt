@@ -1,0 +1,60 @@
+INC-001 — Wazuh Correlation Log
+
+Wazuh Rule ID: 60204
+Rule Description: Multiple Windows Logon Failures
+Rule Level: 10
+
+Detection:
+  Windows Event ID: 4625
+  Frequency: 8
+  Alert Fired Times: 6
+  MITRE Technique: T1110 — Brute Force
+  MITRE Tactic: Credential Access
+
+Wazuh Alert Timestamp:
+  2026-09-24T15:04:23.768+0000
+
+Agent:
+  ID: 001
+  Name: SOC-Windows
+  IP: 192.168.56.102
+
+Manager:
+  Name: wazuh-server
+
+Target Account:
+  Username: victorr
+  Domain: WORKGROUP
+
+Source:
+  IP Address: 192.168.56.104
+  Workstation: SOCKALI
+
+Authentication:
+  Logon Type: 3
+  Authentication Package: NTLM
+  Logon Process: NtLmSsp
+
+Current Correlated Event:
+  Event Record ID: 5269
+  System Time: 2026-09-24T15:03:35.3180799Z
+  Source Port: 39632
+  Status: 0xc000006d
+  SubStatus: 0xc000006a
+  Failure Reason: %%2313
+
+Previous Correlated Events:
+  Event Record ID: 5268 — Source Port: 39620
+  Event Record ID: 5267 — Source Port: 39608
+  Event Record ID: 5266 — Source Port: 34304
+  Event Record ID: 5265 — Source Port: 34298
+  Event Record ID: 5264 — Source Port: 34288
+  Event Record ID: 5263 — Source Port: 34278
+  Event Record ID: 5262 — Source Port: 34272
+
+Previous events show repeated Windows Event ID 4625 authentication failures
+originating from 192.168.56.104 (SOCKALI) against the account victorr/victorrr.
+
+Wazuh correlation:
+  Rule 60204 was triggered after reaching the configured frequency of
+  multiple Windows logon failures.
