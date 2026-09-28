@@ -1,0 +1,96 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.28",
+  "_id": "ENki6KABWWCaskgAUKPs",
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.102",
+      "name": "SOC-Windows",
+      "id": "001"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "sourcePort": "49125",
+          "sourceAddress": "192.168.56.104",
+          "layerRTID": "44",
+          "protocol": "6",
+          "destPort": "445",
+          "application": "System",
+          "processID": "4",
+          "destAddress": "192.168.56.102",
+          "remoteMachineID": "S-1-0-0",
+          "filterRTID": "68867",
+          "remoteUserID": "S-1-0-0",
+          "layerName": "%%14610",
+          "direction": "%%14592"
+        },
+        "system": {
+          "eventID": "5157",
+          "keywords": "0x8010000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "message": "\"La Plataforma de filtrado de Windows bloqueó una conexión.\r\n\r\nInformación de aplicación:\r\n\tId. de proceso:\t\t4\r\n\tNombre de aplicación:\tSystem\r\n\r\nInformación de red:\r\n\tDirección:\t\tEnlace interno\r\n\tDirección de origen:\t\t192.168.56.104\r\n\tPuerto de origen:\t\t49125\r\n\tDirección de destino:\t\t192.168.56.102\r\n\tPuerto de destino:\t\t445\r\n\tProtocolo:\t\t6\r\n\r\nInformación de filtro:\r\n\tId. de tiempo de ejecución de filtro:\t68867\r\n\tNombre de nivel:\t\tRecibir o aceptar\r\n\tId. de tiempo de ejecución de nivel:\t44\"",
+          "version": "1",
+          "systemTime": "2026-09-28T13:09:09.0864532Z",
+          "eventRecordID": "8461",
+          "threadID": "304",
+          "computer": "DESKTOP-O678CDM",
+          "task": "12810",
+          "processID": "4",
+          "severityValue": "AUDIT_FAILURE",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 11,
+      "mail": false,
+      "level": 5,
+      "pci_dss": [
+        "10.6.1"
+      ],
+      "hipaa": [
+        "164.312.b"
+      ],
+      "tsc": [
+        "CC7.2",
+        "CC7.3"
+      ],
+      "description": "Windows audit failure event",
+      "groups": [
+        "windows",
+        "windows_security"
+      ],
+      "id": "60104",
+      "nist_800_53": [
+        "AU.6"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ]
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1790600955.4390398",
+    "timestamp": "2026-09-28T13:09:15.732+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-09-28T13:09:15.732Z"
+    ]
+  },
+  "sort": [
+    1790600955732
+  ]
+}
