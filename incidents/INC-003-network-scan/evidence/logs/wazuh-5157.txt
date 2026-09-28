@@ -1,0 +1,50 @@
+INC-003 — Wazuh Event Data
+
+Index: wazuh-alerts-4.x-2026.09.28
+Document ID: ENki6KABWWCaskgAUKPs
+
+Timestamp: 2026-09-28T13:09:15.732+0000
+
+Agent ID: 001
+Agent Name: SOC-Windows
+Agent IP: 192.168.56.102
+Manager: wazuh-server
+
+Wazuh Rule ID: 60104
+Rule Level: 5
+Rule Description: Windows audit failure event
+
+Windows Event ID: 5157
+Channel: Security
+Provider: Microsoft-Windows-Security-Auditing
+Severity: AUDIT_FAILURE
+Event Record ID: 8461
+Computer: DESKTOP-O678CDM
+
+Source Address: 192.168.56.104
+Source Port: 49125
+
+Destination Address: 192.168.56.102
+Destination Port: 445
+
+Protocol: 6
+Application: System
+Process ID: 4
+
+Remote Machine ID: S-1-0-0
+Remote User ID: S-1-0-0
+
+Filter Runtime ID: 68867
+Layer Runtime ID: 44
+Layer Name: %%14610
+Direction: %%14592
+
+System Time:
+2026-09-28T13:09:09.0864532Z
+
+Wazuh Event ID:
+1790600955.4390398
+
+Wazuh Alert Fired Times:
+11
+
