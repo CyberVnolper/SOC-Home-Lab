@@ -114,11 +114,11 @@ For a production environment, appropriate controls for suspicious PowerShell and
 
 #### 01 - Wazuh Alert
 
-![Wazuh Alert](../incidents/INC-002-suspicious-powershell/evidence/screenshots/01-wazuh-91843-alert.png)
+![Wazuh Alert](../incidents/INC-002-suspicious-powershell/evidence/screenshots/03-wazuh-91843-alert.png)
 
 #### 02 - PowerShell New-ItemProperty
 
-![PowerShell Command](../incidents/INC-002-suspicious-powershell/evidence/screenshots/02-powershell-new-itemproperty.png)
+![PowerShell Command](../incidents/INC-002-suspicious-powershell/evidence/screenshots/02-powershell-command.png)
 
 ## Conclusion
 
