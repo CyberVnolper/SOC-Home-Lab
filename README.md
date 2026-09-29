@@ -25,7 +25,6 @@ El proyecto busca demostrar de forma práctica:
 - Ubuntu Server
 - Kali Linux
 - Nmap
-- Wireshark
 - PowerShell
 - Bash
 - Python
@@ -65,7 +64,6 @@ La documentación del proyecto se organiza en:
 - `detections/` — documentación de las detecciones.
 - `incidents/` — investigaciones completas de los incidentes.
 - `reports/` — informes finales.
-- `screenshots/` — evidencias visuales.
 
 ## Estado
 
