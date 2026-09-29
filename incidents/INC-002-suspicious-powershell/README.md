@@ -76,14 +76,6 @@ evidence/
 
 *   [`wazuh-91843.txt`](evidence/logs/wazuh-91843.txt)
 
-### Screenshots
-
-#### 01 - Wazuh Alert
-![Wazuh Alert](../screenshots/01-wazuh-91843-alert.png)
-
-#### 02 - PowerShell New-ItemProperty
-![PowerShell Command](../screenshots/02-powershell-new-itemproperty.png)
-
 ## Final Report
 
 The complete incident report is available at:
