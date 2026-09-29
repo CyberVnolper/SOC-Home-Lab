@@ -1,0 +1,52 @@
+INC-004 — Wazuh Event Data
+
+Index: wazuh-alerts-4.x-2026.09.29
+Document ID: iJuF7aABafRUMS4u6X6x
+
+Timestamp: 2026-09-29T14:16:01.779+0000
+
+Agent ID: 001
+Agent Name: SOC-Windows
+Agent IP: 192.168.56.102
+Manager: wazuh-server
+
+Wazuh Rule ID: 61618
+Rule Level: 12
+Rule Description: Sysmon - Suspicious Process - svchost.exe
+
+Windows Event ID: 1
+Channel: Microsoft-Windows-Sysmon/Operational
+Provider: Microsoft-Windows-Sysmon
+Severity: INFORMATION
+Event Record ID: 22329
+Computer: DESKTOP-O678CDM
+
+Process:
+Image: C:\SOC-LAB\svchost.exe
+Process ID: 8936
+Command Line: "C:\SOC-LAB\svchost.exe"
+Original File Name: NOTEPAD.EXE
+Description: Notepad
+User: DESKTOP-O678CDM\victorr
+Integrity Level: High
+
+Parent Process:
+Parent Image: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Parent Process ID: 7812
+Parent Command Line: "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+
+File:
+Company: Microsoft Corporation
+Product: Microsoft® Windows® Operating System
+File Version: 10.0.19041.3636
+SHA256=BAEFAFD4C558E8EC66A5772B8AC8DC18D51789CCAF97BE5FC66CD63A71CAF75C
+
+Sysmon Event Time:
+2026-09-29 14:16:00.248
+
+Wazuh Event ID:
+1790691361.743895
+
+Wazuh Alert Fired Times:
+2
+
