@@ -22,10 +22,11 @@ Wazuh Rule 61618
 
 The process creation event recorded:
 
-
+```text
 Image: C:\SOC-LAB\svchost.exe
 OriginalFileName: NOTEPAD.EXE
 ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+```
 
 
 
