@@ -87,6 +87,16 @@ evidence/
     └── 03-wazuh-4625-timeline.png
 ```
 
+### Event Data
+
+*   [`event-60122.json`](evidence/events/event-60122.json)
+*   [`event-60204.json`](evidence/events/event-60204.json)
+
+### Log Data
+
+*   [`wazuh-60122.txt`](evidence/logs/wazuh-60122.txt)
+*   [`wazuh-60204.txt`](evidence/logs/wazuh-60204.txt)
+
 ## Final Report
 
 The complete incident report is available at: [incident-report-INC-001.md](../../reports/incident-report-INC-001.md)
