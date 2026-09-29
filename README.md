@@ -1,6 +1,6 @@
 # SOC Home Lab
 
-Laboratorio práctico de ciberseguridad orientado a la monitorización, detección, investigación y respuesta ante incidentes de seguridad.
+Laboratorio práctico de ciberseguridad en ingles orientado a la monitorización, detección, investigación y respuesta ante incidentes de seguridad.
 
 ## Objetivo
 
@@ -66,11 +66,10 @@ La documentación del proyecto se organiza en:
 - `incidents/` — investigaciones completas de los incidentes.
 - `reports/` — informes finales.
 - `screenshots/` — evidencias visuales.
-- `scripts/` — scripts utilizados durante el laboratorio.
 
 ## Estado
 
-En desarrollo.
+Finalizado.
 
 ## Disclaimer
 
